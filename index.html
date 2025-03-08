@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advocacia - Fernanda Toledo</title>
+  <link rel="icon" type="image/png" href="FAV2.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      max-width: 80px;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .text {
+      width: 60%;
+      text-align: left;
+    }
+    .image {
+      width: 38%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    .info {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .info-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .text, .image {
+        width: 100%;
+        text-align: center;
+      }
+      .image {
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .info-box {
+        width: 90%;
+      }
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="header">
+      <img src="FAV2.png.png" alt="Logo da Advocacia" class="logo">
+      <h1>Fernanda Toledo - Advocacia Previdenciária</h1>
+    </div>
+  </header>
+  <div class="content">
+    <div class="text">
+      <h1>Seja Bem-vindo</h1>
+      <p>Escritório de advocacia especializado em Direito Previdenciário, com atendimento em todo o Brasil.</p>
+      <div class="info">
+        <div class="info-box">
+          <strong>Atendimento presencial:</strong><br>
+          Morrinhos-GO<br>
+          Goiânia-GO
+        </div>
+        <div class="info-box">
+          <strong>Contato:</strong><br>
+          Email: fernandatoledo_adv@hotmail.com<br>
+          Telefone: (64) 99339-3345<br>
+          Instagram: adv_fernandatoledo
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="FOTO.jpg.jpeg" alt="Fernanda Toledo">
+    </div>
+  </div>
+
+  <h1>Nossos Serviços</h1>
+  <div id="services"></div>
+</div>
+
+<script>
+  const services = [
+    { title: "Atuação", description: "Atuamos com dedicação e conhecimento especializado, oferecendo soluções jurídicas eficientes na área previdenciária, com atendimento presencial ou a distância. Nosso compromisso é prestar um serviço sério e personalizado, sempre buscando o melhor resultado para cada caso." },
+    { title: "Análise Previdenciária", description: "Avaliamos sua situação previdenciária de forma detalhada, identificando direitos e possibilidades para garantir a melhor estratégia na busca dos seus benefícios." },
+    { title: "Planejamento Previdenciário", description: "Planejamos sua aposentadoria de forma estratégica, considerando tempo de contribuição, valores e regras vigentes, para que você tenha segurança e aproveite os melhores benefícios.\n" },
+    { title: "Concessão de Benefícios", description: "Atuamos na solicitação e acompanhamento de benefícios previdenciários, como auxílio-doença, BPC, salário-maternidade, auxílio-acidente, entre outros, garantindo que seus direitos sejam respeitados." },
+    { title: "Aposentadorias", description: "Auxiliamos no pedido de aposentadoria, analisando as regras aplicáveis ao seu caso e buscando a melhor forma de garantir um benefício justo e vantajoso." },
+    { title: "Aposentadoria Rural", description: "Prestamos assessoria especializada para trabalhadores rurais, assegurando o reconhecimento da atividade no campo e a conquista da aposentadoria devida." },
+    { title: "Cálculos Previdenciários", description: "Realizamos cálculos precisos para verificar valores de benefícios, contribuições e possíveis revisões, garantindo maior clareza e segurança na sua jornada previdenciária.\n" }
+  ];
+
+  const servicesContainer = document.getElementById("services");
+  services.forEach(service => {
+    const serviceBox = document.createElement("div");
+    serviceBox.classList.add("content");
+    serviceBox.innerHTML = `
+      <div class="text">
+        <div class="info-box">
+          <strong>${service.title}:</strong><br>
+          ${service.description}
+        </div>
+      </div>
+      <div class="image">
+        <img src="capaface.jpg" alt="${service.title}">
+      </div>
+    `;
+    servicesContainer.appendChild(serviceBox);
+  });
+</script>
+  <a href="https://api.whatsapp.com/send?phone=5564993393345&text=Ol%C3%A1!%20Seja%20bem-vindo(a)!%20Como%20posso%20te%20ajudar%20a%20garantir%20seus%20direitos?%20Me%20conte%20um%20pouco%20sobre%20sua%20situa%C3%A7%C3%A3o%20para%20que%20eu%20possa%20te%20orientar%20da%20melhor%20forma."
+     class="whatsapp-button"
+     target="_blank">
+    <img src="whatsappicon.png" alt="Fale Conosco pelo WhatsApp">
+  </a>
+</body>
+</html>
